@@ -69,6 +69,15 @@ textarea {
   overflow: hidden;
 }
 
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .list {
   margin: 0;
   padding-left: 0;
@@ -566,6 +575,9 @@ textarea {
 .subscribe-form button {
   padding: 10px 28px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -577,15 +589,15 @@ textarea {
 }
 
 .subscribe-input {
-padding: 15px 16px;
+  padding: 15px 16px;
 
-font-size: 16px;
-line-height: calc(20 / 16);
+  font-size: 16px;
+  line-height: calc(20 / 16);
 
-color: var(--main-bgd-color);
-background-color: var(--footer-bgd-color);
-border: 1px solid var(--footer-input-border-color);
-border-radius: 4px;
+  color: var(--main-bgd-color);
+  background-color: var(--footer-bgd-color);
+  border: 1px solid var(--footer-input-border-color);
+  border-radius: 4px;
 }
 
 .subscribe-input::placeholder {
@@ -594,13 +606,14 @@ border-radius: 4px;
 
 .send-icon {
   fill: var(--main-bgd-color);
+  margin-left: 10px;
 }
 
 .subscribe-title {
-margin-bottom: 20px;
-font-weight: 700;
-line-height: calc(16 / 14);
-color: var(--main-bgd-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  color: var(--main-bgd-color);
 }
 
 /* ---------Портфоліо---------- */
@@ -718,7 +731,8 @@ color: var(--main-bgd-color);
   border: solid 1px var(--card-border-color);
 }
 
-/* Стилі заголовків портфоліо */
+/* !Стилі заголовків портфоліо */
+
 .card-title {
   margin-bottom: 4px;
   font-size: 18px;
@@ -731,6 +745,8 @@ color: var(--main-bgd-color);
   font-size: 16px;
   line-height: calc(30 / 16);
 }
+
+/* !Стилі модалки */
 
 .backdrop {
   position: fixed;
@@ -792,7 +808,7 @@ color: var(--main-bgd-color);
 
 .modal-close-btn:hover > .modal-close-icon,
 .modal-close-btn:focus > .modal-close-icon {
-fill: var(--primary-logo-color);
+  fill: var(--primary-logo-color);
 }
 
 .modal-close-icon {
@@ -827,14 +843,14 @@ fill: var(--primary-logo-color);
   line-height: calc(23 / 20);
 }
 
-.form-field {
+.feedback-form > .form-field {
   position: relative;
 
   display: flex;
   flex-direction: column;
 }
 
-.form-field label {
+.feedback-form > .form-field label {
   position: absolute;
 
   width: 100%;
@@ -851,7 +867,7 @@ fill: var(--primary-logo-color);
   color: var(--paragraph-color);
 }
 
-.form-field input {
+.feedback-form > .form-field input {
   width: 100%;
   margin-bottom: 10px;
   padding-top: 12px;
@@ -866,12 +882,12 @@ fill: var(--primary-logo-color);
   transition: border-color var(--time-function);
 }
 
-.form-field input:focus,
-.comment-input:focus {
+.feedback-form > .form-field input:focus,
+.form-field > .comment-input:focus {
   border-color: var(--primary-logo-color);
 }
 
-.form-field:focus-within > .feedback-form-icon {
+.feedback-form > .form-field:focus-within > .feedback-form-icon {
   fill: var(--primary-logo-color);
 }
 
@@ -888,6 +904,7 @@ fill: var(--primary-logo-color);
   position: absolute;
   top: 8px;
   left: 3px;
+
   fill: var(--main-bgd-color);
 }
 
@@ -953,12 +970,3 @@ fill: var(--primary-logo-color);
 .checkbox-link {
   color: var(--primary-logo-color);
 }
-
-.unselectable {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;
-}           /* Non-prefixed version, currently
