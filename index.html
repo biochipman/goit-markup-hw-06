@@ -420,7 +420,7 @@
         <div class="subscribe">
           <p class="subscribe-title capitalize">Підпишіться на розсилку</p>
           <form class="subscribe-form">
-            <input class="subscribe-input" name="subscribe-email" type="email" placeholder="E-mail" />
+            <input class="subscribe-input" name="subscribe-email" type="email" placeholder="E-mail" required />
             <button class="btn-primary" type="submit">
               Підписатися
               <svg class="send-icon" width="24" height="24">
@@ -445,8 +445,8 @@
           <p class="feedback-slogan">Залиште свої дані, ми вам передзвонимо</p>
 
           <div class="form-field">
-            <input type="text" class="form-input" name="feedback-name" id="feedback-name" />
             <label for="feedback-name" class="form-label"> Ім'я </label>
+            <input type="text" class="form-input" name="feedback-name" id="feedback-name" required />
 
             <svg class="feedback-form-icon" width="18" height="18">
               <use href="./images/sprite.svg#icon-person"></use>
@@ -454,8 +454,8 @@
           </div>
 
           <div class="form-field">
-            <input type="text" class="form-input" name="feedback-tel" id="feedback-tel" />
             <label for="feedback-tel" class="form-label"> Телефон </label>
+            <input type="tel" class="form-input" name="feedback-tel" id="feedback-tel" required />
 
             <svg class="feedback-form-icon" width="18" height="18">
               <use href="./images/sprite.svg#icon-phone"></use>
@@ -463,31 +463,29 @@
           </div>
 
           <div class="form-field">
-            <input type="text" class="form-input" name="feedback-email" id="feedback-email" />
             <label for="feedback-email" class="form-label"> Пошта </label>
+            <input type="text" class="form-input" name="feedback-email" id="feedback-email" required />
 
             <svg class="feedback-form-icon" width="18" height="18">
               <use href="./images/sprite.svg#icon-email"></use>
             </svg>
           </div>
 
-          <div class="form-field">
+          <div class="form-field comment">
             <label for="comment" class="form-label">Коментарій</label>
             <textarea class="comment-input" name="comment" id="comment" rows="5" placeholder="Введіть текст"></textarea>
           </div>
 
-          <div class="checkbox">
-            <input class="submit-checkbox" type="checkbox" name="checkbox" id="checkbox" />
-            <label class="checkbox-label unselectable" for="checkbox"
-              >Погоджуюся з розсилкою та приймаю <a class="checkbox-link" href="#">Умови договору</a></label
-            >
-
-            <svg class="checkbox-icon" width="16" height="15">
-              <use href="./images/sprite.svg#icon-checkbox"></use>
-            </svg>
-            <svg class="checkmark-icon" width="11" height="8">
-              <use href="./images/sprite.svg#icon-check-mark"></use>
-            </svg>
+          <div class="check-container">
+            <label class="check option unselectable">
+              <input class="check__input" type="checkbox" checked required />
+              <span class="check__box">
+                <svg class="checkmark-icon" width="11" height="8">
+                  <use href="./images/sprite.svg#icon-check-mark"></use>
+                </svg>
+              </span>
+              Погоджуюся з розсилкою та приймаю<a class="checkbox-link" href="#">Умови договору</a>
+            </label>
           </div>
 
           <button class="btn-primary" type="submit">Відправити</button>
