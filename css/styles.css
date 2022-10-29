@@ -842,6 +842,7 @@ textarea {
 
 .feedback-form > .form-field {
   position: relative;
+
   margin-bottom: 10px;
 }
 
@@ -861,6 +862,7 @@ textarea {
   display: block;
   width: 100%;
   height: 40px;
+
   margin-top: 4px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -895,6 +897,7 @@ textarea {
   display: block;
   width: 100%;
   height: 120px;
+
   margin-top: 4px;
   padding: 12px 16px;
 
@@ -921,10 +924,13 @@ textarea {
 }
 
 .check {
+  position: relative;
+
   display: flex;
   align-items: center;
-  position: relative;
-  padding-left: 15px;
+
+  padding-left: 18px;
+
   color: var(--paragraph-color);
   line-height: calc(24 / 14);
 }
@@ -944,7 +950,9 @@ textarea {
 
 .check__box {
   position: absolute;
+
   left: 7px;
+
   margin-top: 0.2em;
   margin-left: -1em;
   width: 16px;
@@ -954,7 +962,9 @@ textarea {
   background-color: white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  box-shadow: 0 0 0 0.1em var(--main-font-color);
+  box-shadow: 0 0 0 0.15em var(--main-font-color);
+
+  transition: box-shadow var(--time-function);
 }
 
 .checkmark-icon {
@@ -967,6 +977,10 @@ textarea {
 
 .check__input:checked ~ .check__box {
   background-color: var(--primary-logo-color);
+  box-shadow: 0 0 0 0.1em var(--primary-logo-color);
+}
+
+.check__input:focus + .check__box {
   box-shadow: 0 0 0 0.1em var(--primary-logo-color);
 }
 
